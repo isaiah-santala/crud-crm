@@ -4,10 +4,12 @@
   "private": true,
   "dependencies": {
     "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "faker": "^4.1.0",
     "mongoose": "^5.6.9",
     "morgan": "^1.9.1",
+    "nodemon": "^1.19.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.0"
@@ -17,7 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "seed": "node ./db/seed.js"
+    "seed": "node ./db/seed.js",
+    "server": "nodemon ./server/index.js"
   },
   "eslintConfig": {
     "extends": "react-app"
