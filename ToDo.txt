@@ -1,0 +1,21 @@
+[ ] - INIT DB
+  [X] - Set up Mongoose schema and connection to Mongo
+  [X] - Write controller methods to getAll and addBatch
+  [X] - Gen 100 primary records and add to db
+
+[ ] - SERVER
+  [ ] - Create Express server which can call db methods
+
+[ ] - REACT
+  [ ] - LIST VIEW
+    [ ] - List leads in max of 15 with scroll buttons
+    [ ] - Call api for leads from db
+  [ ] - MAP VIEW
+    [ ] - Create a map with google maps api for the 100 records in db
+    [ ] - Displauy that map on page
+    [ ] - Research how to dynamically render map   
+
+STRETCH VIEWS
+  [ ] - LEAD DETAILS VIEW
+  [ ] - ADD LEAD VIEW
+  [ ] - EDIT LEAD VIEW
