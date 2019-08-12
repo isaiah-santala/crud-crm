@@ -1,14 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-function ListView() {
-  const [leads, setLeads] = useState([])
-
-  useEffect(() => {
-    fetch('http://localhost:3001/leads')
-      .then(newLeads => newLeads.json())
-      .then(newLeads => setLeads(newLeads))
-      .catch(console.log)
-  }, [])
+function ListView({ changeView, selectLead, leads }) {
 
   return (
     <div className="list">
