@@ -30,9 +30,9 @@ function MapView({leads}) {
       </div>
       <MapRender
         isMarkerShown
-        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBC1wMQH7jDjhjmkp1bepkdQ3CVgLOjng0&v=3.exp&libraries=geometry,drawing,places"
         loadingElement={<div style={{ height: `100%` }} />}
-        containerElement={<div style={{ height: `700px`, width: `100%` }} />}
+        containerElement={<div style={{ height: `745px`, width: `100%` }} />}
         mapElement={<div style={{ height: `100%` }} />}
         leads={city}
       />

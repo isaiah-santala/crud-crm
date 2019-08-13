@@ -1,7 +1,7 @@
 import React from 'react';
 
 function ListView({ changeView, selectLead, leads, setLeads }) {
-  async function sortBy(e) {
+  async function sortBy() {
     const newLeads = leads.slice()
     const sorted = await newLeads.sort((a, b) => {
       if (a.address.city.slice(0, 4) < b.address.city.slice(0, 4)) { return -1; }
@@ -14,7 +14,7 @@ function ListView({ changeView, selectLead, leads, setLeads }) {
   return (
     <div className="leads">
       <div className="filter">
-        filter by:
+        sort by:
         <select onChange={sortBy}>
           <option>...select filter...</option>
           <option value="city">city</option>
