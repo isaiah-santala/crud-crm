@@ -9,11 +9,15 @@
 [ ] - REACT
   [ ] - LIST VIEW
     [ ] - List leads in max of 15 with scroll buttons
-    [ ] - Call api for leads from db
+    [X] - Call api for leads from db
   [ ] - MAP VIEW
-    [ ] - Create a map with google maps api for the 100 records in db
-    [ ] - Displauy that map on page
-    [ ] - Research how to dynamically render map   
+    [X] - Create a map with google maps api for the 100 records in db
+    [X] - Display that map on page
+    [X] - Research how to dynamically render map
+    [X] - Load map to proper size and coordinates
+    [X] - Remove alaska from db
+    [ ] - Add some text details to map
+    [ ] - Allow filtering by city
 
 STRETCH VIEWS
   [ ] - LEAD DETAILS VIEW

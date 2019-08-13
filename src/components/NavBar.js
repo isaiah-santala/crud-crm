@@ -1,16 +1,15 @@
 import React from 'react';
 
 function NavBar({changeView}) {
-  const viewOptions = ['Leads', 'Map']
+  const viewOptions = ['Home','Leads', 'Map']
 
   return (
     <div className="navBar">
-      {
-        viewOptions.map((e, i) => (  
+      {viewOptions.map((e, i) => (  
           <button
             key={i}
             onClick={changeView}
-            name={e}
+            data-name={e}
           >{e}</button>
       ))}
     </div>

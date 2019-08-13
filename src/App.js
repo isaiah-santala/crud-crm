@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from './components/NavBar';
+import HomeView from './components/HomeView';
 import ListView from './components/ListView';
 import MapView from './components/MapView';
 import LeadView from './components/LeadView';
 import './App.css';
 
 function App() {
-  const [view, setView] = useState('')
+  const [view, setView] = useState('Home')
   const [leads, setLeads] = useState([])
+  const [lead, setLead] = useState({})
 
   useEffect(() => {
     fetch('http://localhost:3001/leads')
@@ -17,27 +19,33 @@ function App() {
   }, [])
 
   function changeView(e) {
-    setView(e.target.name)
+    setView(e.target.getAttribute('data-name'))
+  }
+
+  function selectLead(selectedLead) {
+    setLead(selectedLead)
   }
 
   return (
     <div className="app">
       <NavBar changeView={changeView}/>
-      {view === '' && <h2>Select View</h2>}
+      {view === 'Home' && 
+        <HomeView/>}
       {view === 'Leads' && 
         <ListView 
           leads={leads}
           changeView={changeView}
+          selectLead={selectLead}
+          setLeads={setLeads}
+        />}
+      {view === 'Lead' &&
+        <LeadView 
+          lead={lead}
         />}
       {view === 'Map' &&
         <MapView 
-          isMarkerShown
-          googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
-          loadingElement={<div style={{ height: `100%` }} />}
-          containerElement={<div style={{ height: `700px`, width: `75%` }} />}
-          mapElement={<div style={{ height: `100%` }} />}
           leads={leads}
-        />}
+        />} 
     </div>
   );
 }

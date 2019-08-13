@@ -3,9 +3,17 @@ const fs = require('fs')
 
 exports.generateLeadsArr = (numberOfLeads) => {
   const leads = []
+  const doNotRun = [
+    41,
+    74,
+    111,
+    142,
+    234,
+    335
+  ]
 
   for (let c = 0; c < numberOfLeads; c++) {
-    leads.push(generateLead(c))
+    if (!doNotRun.includes(c)) leads.push(generateLead(c))
   }
   return leads
 }
@@ -16,7 +24,7 @@ const generateLead = (idx) => ({
   email: faker.internet.email(),
   phone: faker.phone.phoneNumberFormat(),
   leadSrc: `${faker.name.firstName()} ${faker.name.lastName()}`,
-  adress: generateAdress(idx),
+  address: generateAdress(idx),
   title: faker.name.jobTitle(),
   industry: faker.name.jobType(),
   revenue: 999999,

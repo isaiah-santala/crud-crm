@@ -10,7 +10,7 @@ const CRMSchema = new mongoose.Schema({
   email: String,
   phone: String,
   leadSrc: String,
-  adress: Object,
+  address: Object,
   title: String,
   industry: String,
   revenue: Number,

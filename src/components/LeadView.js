@@ -1,8 +1,10 @@
 import React from 'react'
 
-function LeadView() {
+function LeadView({lead}) {
   return (
-    <h1>LeadView</h1>
+    <div className="lead-details">
+      <h1>{lead.leadName}</h1>
+    </div>
   )
 }
 
